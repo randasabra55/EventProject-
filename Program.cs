@@ -1,4 +1,5 @@
 using EventProject.AppContext;
+using EventProject.Features;
 using Microsoft.EntityFrameworkCore;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,8 @@ builder.CreateUmbracoBuilder()
 
 builder.Services.AddDbContext<Context>(options =>
               options.UseSqlServer(builder.Configuration.GetConnectionString("umbracoDbDSN")));
+
+builder.Services.AddHostedService<UpcomingEventsJob>();
 
 WebApplication app = builder.Build();
 
