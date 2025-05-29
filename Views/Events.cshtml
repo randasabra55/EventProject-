@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = "Master.cshtml";
+    var title = Model.Value("title");
+    var description = Model.Value("description");
+    var startDate = Convert.ToDateTime(Model.Value("startDate"));
+    var endDate = Convert.ToDateTime(Model.Value("endDate"));
+    var location = Model.Value("location");
+    var eventType = Model.Value("eventType");
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-body">
+            <h2 class="card-title text-primary">@title</h2>
+
+            <div class="mb-3 text-muted">
+                <strong>Type :</strong> @eventType
+            </div>
+
+            <div class="mb-3">
+                <strong>Date:</strong>
+                @startDate.ToString("dd MMMM yyyy") - @endDate.ToString("dd MMMM yyyy")
+            </div>
+
+            <div class="mb-3">
+                <strong>Location:</strong> @location
+            </div>
+
+            <div class="mb-3">
+                <strong>Description:</strong>
+                <div>@Html.Raw(description)</div>
+            </div>
+        </div>
+    </div>
+</div>
