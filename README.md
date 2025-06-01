@@ -2,7 +2,7 @@
 
 This is a content management system for managing events and announcements, developed using **Umbraco CMS** on top of the **.NET Framework**. The project allows admins to create, edit, and publish content dynamically through the Umbraco backoffice.
 
-## 📌 Features
+## Features
 
 - Manage events and announcements via Umbraco's backoffice.
 - Use of SurfaceControllers to handle form submissions.
@@ -10,7 +10,7 @@ This is a content management system for managing events and announcements, devel
 - Secure content editing and publishing workflows.
 - Admin panel for content management (via Umbraco dashboard).
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - ASP.NET (MVC)
 - Umbraco CMS
